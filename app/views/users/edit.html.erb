@@ -1,0 +1,6 @@
+<%= form_for @user do |f| %>
+  <%= f.radio_button :units, 'mg/dL', checked: true if cookies[:bgl_is_mgdl] %>mg/dL<br />
+  <%= f.radio_button :units, 'mmol/L', checked: true if !cookies[:bgl_is_mgdl] %>mmol/L<br />
+
+  <%= f.submit %>
+<% end %>

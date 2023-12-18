@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root "manual#home"
+
+  get '/manual/monitoring', to: 'manual#monitoring', as: 'manual_monitoring'
+
+  resource 'user'
 end
