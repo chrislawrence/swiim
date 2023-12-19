@@ -3,9 +3,18 @@ class UsersController < ApplicationController
   end
 
   def edit
-  @user = User.new(units: 'mgdL')
+  @user = User.new(units: cookies[:units] || "mmol/L")
   end
 
-  def update
+  def create
+    cookies[:units] = user_params[:units]
+    logger.debug cookies
+    redirect_to root_path
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:units)
   end
 end

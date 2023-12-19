@@ -11,5 +11,5 @@ Rails.application.routes.draw do
 
   get '/manual/monitoring', to: 'manual#monitoring', as: 'manual_monitoring'
 
-  resource 'user'
+  resource 'users'
 end

@@ -1,5 +1,6 @@
 <h1>BGL Monitoring</h1>
 
-<p>Your BGL should be <%=get_bgl(3.5) %> - <%= get_bgl(8.0)%> <%= get_bgl_units %>.</p>
+<p>Your BGL should be <%=get_bgl(3.5) %> - <%= get_bgl_with_units(8.0)%>.</p>
 
 <%= link_to 'Back to table of contents', root_path %>
+<%= link_to 'Preferences', edit_users_path %>
