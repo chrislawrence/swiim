@@ -1,6 +1,13 @@
 <%= form_for @user do |f| %>
+  <%= f.label :units, "What units do you use for blood glucose?"%> <br />
   <%= f.radio_button :units, 'mg/dL' %>mg/dL<br />
   <%= f.radio_button :units, 'mmol/L' %>mmol/L<br />
 
-  <%= f.submit %>
+  <%= f.label :hba1c, "What units do you use for HbA1c?"%><br />
+  <%= f.radio_button :hbA1c, 'mmol/mol' %>mmol/mol<br />
+  <%= f.radio_button :hbA1c, '%' %>%<br />
+
+  
+
+  <%= f.submit "Save Preferences" %>
 <% end %>

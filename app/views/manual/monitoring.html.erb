@@ -1,6 +1,37 @@
-<h1>BGL Monitoring</h1>
+<h1>Blood Glucose Monitoring</h1>
 
-<p>Your BGL should be <%=get_bgl(3.5) %> - <%= get_bgl_with_units(8.0)%>.</p>
+<p>Check BGL at breakfast, morning tea, lunch, afternoon tea, dinner and bedtime. Also check your BGL overnight at 3am at least twice a week. Record all results in a diary.</p>
+
+<p>Aim for BGLs between <%= get_bgl(3.5) %> - <%= get_bgl_with_units(8.0) %></p>
+
+<p>If BGLs are usually over <%= get_bgl_with_units(6.0) %> or are over <%= get_bgl_with_units(8) %> more than twice in a week, you may need to increase your insulin. If you have low BGLs more than twice a week you may need to decrease your insulin.</p>
+
+<p>Aim for your HbA1c to be below <%= get_hbA1c(6.5) %></p>
+
+<h2>Regular Blood Glucose Testing</h2>
+
+<p>Regular BGL testing allows you to adjust your insulin doses to maintain good health and identify when problems are occurring.</p>
+
+<p>The two main aims of testing your BGL are so that you:</p>
+
+<ol>
+  <li>Know what your BGL is.</li>
+  <li>Can adjust your insulin doses.</li>
+</ol>
+
+<p>Knowing what your BGL is allows you to maintain good health and do the things you want to do. Hyperglycaemia is associated with increased anger and sadness while big BGL rises and drops are associated with decreased well-being and quality of life. Hence, having your BGLs in the normal range prevents diabetes related complications and helps you feel better.<sup id="return-1"><a href="#footnote-1"1>1</sup></p>
+
+
+<hr />
+
+<ol>
+  <li>https://sph.umich.edu/pursuit/2019posts/mood-blood-sugar-kujawski.html <a href="#return-1">&#8617;</a></li>
+</ol>
+
+<hr />
+
+<%# <%= render "contents" %> %>
+
 
 <%= link_to 'Back to table of contents', root_path %>
 <%= link_to 'Preferences', edit_users_path %>
