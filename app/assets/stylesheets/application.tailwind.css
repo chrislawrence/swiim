@@ -2,12 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+@layer utilities {
+  .fgoto {
+    /* don't use this with <sup>... one or the other.*/
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+    top: -0.3em; vertical-align: super;
   }
 }
 
-*/
+/* Footnote goto */
+.fgoto {
+  @apply ml-1 mr-0.5;
+  @apply text-gray-200 hover:bg-gray-400 hover:bg-gray-400 hover:text-black !important;
+  @apply no-underline !important;
+}
+/* Footnote return */
+.freturn {
+  @apply ml-2;
+  @apply text-gray-200 hover:bg-gray-400 hover:bg-gray-400 hover:text-black !important;
+  @apply no-underline !important;
+}
+
+.nav-link {
+  @apply underline;
+  @apply hover:no-underline;
+}

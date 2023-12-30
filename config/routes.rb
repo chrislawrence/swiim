@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "manual#home"
   
+  get 'manual/home'
   get 'manual/monitoring'
   get 'manual/what_is_diabetes'
 

@@ -11,9 +11,30 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex-row">
-      <%= yield %>
+  <body class="mx-auto">
+    <nav class="p-6 border border-b-black bg-blue-50">
+      <div class="mx-auto flex items-center text-black max-w-prose justify-between">
+        <div class="flex items-center">
+        <%= image_tag '/assets/logo-circle-dark.png', size: 100 %>
+        <span class="font-bold pl-5 text-4xl">SWIIM</span>
+        </div>
+        <div class="w-12"></div>
+        <div class="text-sm flex items-center justify-between flex-grow">
+          <%= link_to 'Home', root_path, class: "nav-link" %>
+          <%= link_to 'Table of Contents', manual_home_path, class: "nav-link" %>
+          <%= link_to 'Preferences', edit_users_path, class: "nav-link" %>
+         </div>
+      </div>
+    </nav>
+    <main class="mx-auto mt-28 px-5 flex flex-row">
+      <div class="w-1/4">
+        <ul>
+          <li>Chapter 1: Test</li>
+        </ul>
+      </div>
+      <div class="prose flex-grow">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
