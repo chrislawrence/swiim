@@ -1,13 +1,31 @@
 <%= form_for @user do |f| %>
-  <%= f.label :units, "What units do you use for blood glucose?"%> <br />
-  <%= f.radio_button :units, 'mg/dL' %>mg/dL<br />
-  <%= f.radio_button :units, 'mmol/L' %>mmol/L<br />
 
-  <%= f.label :hba1c, "What units do you use for HbA1c?"%><br />
-  <%= f.radio_button :hbA1c, 'mmol/mol' %>mmol/mol<br />
-  <%= f.radio_button :hbA1c, '%' %>%<br />
+  <h3 class="mb-5 text-lg font-medium text-gray-900">What units do you use for blood glucose?</h3>
+
+  <div class="grid w-full gap-6 md:grid-cols-2">
+    <div>
+      <%= f.radio_button :units, 'mg/dL', class: 'hidden peer' %>
+      <%= f.label :units, 'mg/dL', value: 'mg/dL', class: 'pref-item' %>
+    </div>
+    <div>
+      <%= f.radio_button :units, 'mmol/L', class: 'hidden peer' %>
+      <%= f.label :units, 'mmol/L', value: 'mmol/L', class: 'pref-item' %>
+    </div>
+  </div>
+
+  <h3 class="mb-5 text-lg font-medium text-gray-900">What units do you use for HbA1c?</h3>
+
+  <div class="grid w-full gap-6 md:grid-cols-2">
+    <div>
+      <%= f.radio_button :hbA1c, 'mmol/mol', class: 'hidden peer' %>
+      <%= f.label :hbA1c, 'mmol/mol', value: 'mmol/mol', class: 'pref-item' %>
+    </div>
+    <div>
+      <%= f.radio_button :hbA1c, '%', class: 'hidden peer' %>
+      <%= f.label :hbA1c, '%', value: '%', class: 'pref-item' %>
+    </div>
 
   
 
-  <%= f.submit "Save Preferences" %>
+  <%= f.submit "Save Preferences", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
 <% end %>

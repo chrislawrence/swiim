@@ -27,3 +27,21 @@
   @apply underline;
   @apply hover:no-underline;
 }
+
+.pref-item {
+  @apply inline-flex;
+  @apply items-center; 
+  @apply justify-between;
+  @apply w-full; 
+  @apply p-5; 
+  @apply text-gray-500;
+  @apply bg-white;
+  @apply border; 
+  @apply border-gray-200;
+  @apply rounded-lg; 
+  @apply cursor-pointer; 
+  @apply peer-checked:border-blue-600; 
+  @apply peer-checked:text-blue-600;
+  @apply hover:text-gray-600; 
+  @apply hover:bg-gray-100;
+}
