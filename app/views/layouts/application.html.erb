@@ -12,7 +12,7 @@
   </head>
 
   <body class="mx-auto">
-    <nav class="p-6 border border-b-black bg-blue-50">
+    <nav class="p-6 border border-b-black bg-blue-50 h-40 flex justify-center">
       <div class="mx-auto flex items-center text-black max-w-prose justify-between">
         <div class="flex items-center">
         <%= image_tag '/assets/logo-circle-dark.png', size: 100 %>
@@ -27,11 +27,15 @@
       </div>
     </nav>
     <main class="mx-auto mt-28 px-5 flex flex-row">
-      <div class="w-1/4">
-        <%= render 'layouts/contents' %>
-      </div>
-      <div class="prose flex-grow">
-        <%= yield %>
+      <% if current_controller?('manual') %>
+        <div class="hidden lg:block fixed w-52 z-20 inset-0 top-40 right-auto left-[max(0px,calc(50%-45rem)) bg-gray-50 overflow-y-auto">
+          <%= render 'layouts/contents' %>
+        </div>
+      <% end %>
+      <div class="flex-grow <%='lg:pl-52' if current_controller?('manual')%>">
+        <div class="prose mx-auto">
+          <%= yield %>
+        </div>
       </div>
     </main>
   </body>
