@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "manual#home"
+
+  get 'manual', to: 'manual#home'
   
-  get 'manual/home'
   get 'manual/monitoring'
   get 'manual/what_is_diabetes'
 
