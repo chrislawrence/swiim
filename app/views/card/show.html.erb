@@ -1,0 +1,25 @@
+<table>
+  <% @card.each_with_index do |row, index| %>
+    <% if index == 0 %>
+      <thead>
+      <tr>
+        <% row.each do |cell| %>
+          <th><%= cell %></th>
+        <% end %>
+      </tr>
+      </thead>
+      <tbody>
+    <% else %>
+      <tr>
+        <% row.each_with_index do |cell, index| %>
+          <% if index == 0 %>
+            <td class="font-bold"><%=cell.to_s.gsub(".0","") %></td>
+          <% else %>
+            <td><%=cell.to_s.gsub(".0","") %></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>

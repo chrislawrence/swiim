@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get 'manual/what_is_diabetes'
 
   resource 'users'
+
+  get 'card/show'
 end
